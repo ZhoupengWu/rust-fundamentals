@@ -1,0 +1,22 @@
+{
+  "name": "Rust",
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "vadimcn.vscode-lldb",
+        "tamasfe.even-better-toml",
+        "serayuzgur.crates",
+        "teabyii.ayu"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "rust-analyzer.checkOnSave.command": "clippy",
+        "workbench.colorTheme": "Ayu Dark Bordered"
+      }
+    }
+  },
+  "postCreateCommand": "rustup update"
+}
