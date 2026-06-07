@@ -21,4 +21,48 @@ fn main() {
     println!("{s2} {s3}");
     s2 = String::from("buona sera");
     println!("{s2} {s3}");
+
+    // Ownership and functions
+    let secret = String::from("ghsifidsbfhbsiufisdgsjgiusi");
+    lose_ownership(secret);
+    // We can not do this
+    /* println!("{secret}"); */
+
+    let id = 14875973;
+    make_copy(id);
+    println!("Main id: {id}");
+
+    // Return
+    let value = give_ownership();
+    println!("{value}");
+    let value2 = String::from("Padre pio");
+    let value3 = lose_and_give_back(value2);
+    println!("{value3}");
+
+    let word = String::from("Alla sera vedi una rag");
+    let (length, word2) = calculate_length(word);
+    println!("The word '{word2}' has length of {length}");
+
+}
+
+fn lose_ownership(s: String) {
+    println!("Your secret: {s}");
+}
+
+fn make_copy(id: i32) {
+    println!("Your id: {id}");
+}
+
+fn give_ownership() -> String {
+    let s = String::from("Zio pera");
+    s
+}
+
+fn lose_and_give_back(s: String) -> String {
+    s
+}
+
+fn calculate_length(s: String) -> (usize, String) {
+    let length = s.len();
+    (length, s)
 }
