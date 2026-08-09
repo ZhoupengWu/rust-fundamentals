@@ -18,5 +18,5 @@
       }
     }
   },
-  "postCreateCommand": "rustup update"
+  "postCreateCommand": "rustup update && curl -fsSL https://antigravity.google/cli/install.sh | bash"
 }
